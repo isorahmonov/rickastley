@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Developer</title>
+  <style>
+    /* Center everything on the page */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(0, 23%, 95%); /* Light gray background */
+    }
+
+    /* Make the image round */
+    .round-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      
+    }
+
+    /* Style the Contact Me button */
+    #contactButton {
+      background-color: #007BFF; 
+      color: white;              
+      padding: 10px 20px;        
+      border: none;              
+      border-radius: 5px;        
+      font-size: 20px;           
+      margin-top: 20px;          
+      text-decoration: none;    
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2), 0 0 15px rgba(0, 123, 255, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    #contactButton:hover {
+      background-color: #0056b3;
+      box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3), 0 0 20px rgba(0, 123, 255, 0.2);
+    }
+    .container {
+            display: flex;
+            justify-content: center; /* Horizontal zentrieren */
+            align-items: center; /* Vertikal zentrieren */
+            height: 100vh; /* Volle Bildschirmhöhe, optional */
+        }
+    .box {
+            width: 500px;
+            height: 500px;
+            background-color: #ffffff;
+            /* box-shadow: h-offset v-offset blur-radius spread-radius color */
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="box">
+    <p></p>
+    <div style="text-align: center;">
+        <img src="rick.png" class="round-image" alt="Rick Astley">
+        <h2 style="font-size: 40px;"><strong>Rick Astley</strong></h2>
+        <p style="color: #666666; font-size: 30px;">Web Developer</p>
+        <p style="color: #666666; font-size: 20px;">Never gonna give you up. Never gonna let you down.</p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="contactButton">Contact Me</a>
+    </div>
+
+    <!-- JavaScript for button action -->
+    <script>
+        // Find the button
+        let button = document.getElementById("contactButton");
+
+        // What happens when button is clicked
+        button.onclick = function() {
+            // Show confirmation question
+            let answer = confirm("Are you sure you want to contact Rick Astley?");
+            
+            // Go to video if user clicks OK
+            if (answer == true) {
+                window.location.href = button.href; // Open Rickroll video
+            }
+        };
+    </script>
+    </div>
+  </div>
+</body>
+</html>
